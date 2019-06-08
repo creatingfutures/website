@@ -1,389 +1,476 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+    <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Creating Futures</title>
-    <meta name="description" content="Creating Futures is a non-profit and non-government organization. It aims to create employment opportunities for the educated rural and urban youth from economically  under-privileged background by providing them with real-life experiences, building their capabilities as well as training them in various skills to make them highly capable corporate-ready resources. ">
-	<meta name='keywords' content='Skill Development, Education to Employability, Internship Programs, Professional training, Spoken English, Whole School Development, Life skills Program, Computer Skill training, E2E Program'>
-    <meta name="author" content="CreatingFutures">
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Creating Futures</title>
+        <meta name="description" content="Creating Futures is a non-profit and non-government organization. It aims to create employment opportunities for the educated rural and urban youth from economically  under-privileged background by providing them with real-life experiences, building their capabilities as well as training them in various skills to make them highly capable corporate-ready resources. ">
+        <meta name='keywords' content='Skill Development, Education to Employability, Internship Programs, Professional training, Spoken English, Whole School Development, Life skills Program, Computer Skill training, E2E Program'>
+        <meta name="author" content="CreatingFutures">
+        <!-- Bootstrap Core CSS -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom CSS -->
-    <link href="css/agency.css" rel="stylesheet">
+        <!-- Custom CSS -->
+        <link href="css/agency.css" rel="stylesheet">
 
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-    <link href='http://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+        <!-- Custom Fonts -->
+        <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+        <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+        <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
 
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-    <!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-    <script>
-      (adsbygoogle = window.adsbygoogle || []).push({
-        google_ad_client: "ca-pub-3698450298276950",
-        enable_page_level_ads: true
-      });
-    </script> -->
-</head>
 
-<body id="page-top" class="index">
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <!-- <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <script>
+          (adsbygoogle = window.adsbygoogle || []).push({
+            google_ad_client: "ca-pub-3698450298276950",
+            enable_page_level_ads: true
+          });
+        </script> -->
+        <style type="text/css">
+            .galleryThumbnail
+            {
+                height:16em;
+                width:16em;
+            }
+            
+            .overlay {
+                position: absolute;
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                height: 100%;
+                width: 100%;
+                opacity: 0;
+                transition: .5s ease;
+                background-color: white;
+                }
+                
+                .text {
+                  color: black;
+                  font-size: 18px;
+                  position: absolute;
+                  top: 50%;
+                  left:40%;
+                  -webkit-transform: translate(-50%, -50%);
+                  -ms-transform: translate(-50%, -50%);
+                  transform: translate(-50%, -50%);
+                  text-align: left;
+                }
+                
+                .team-member:hover .overlay {
+                  opacity: 0.7;
+                }
+        </style>
+    </head>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-default navbar-fixed-top">
-        <div class="container">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header page-scroll">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top"><!-- Creating Futures --></a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav navbar-right">
-                   <!--  <li >
-                        <a href="#page-top">HOME</a>
-                    </li> -->
-                    <li>
-                        <a class="page-scroll" href="#page-top">HOME</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#about">OUR STORY</a><!-- #about -->
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#impact">IMPACT</a><!-- #about -->
-                    </li>
-                    <!-- <li>
-                        <a class="page-scroll" href="#family">OUR FAMILY</a>
-                    </li> -->
-                    <li>
-                        <a class="page-scroll" href="#partner">GET INVOLVED</a><!-- #portfolio -->
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#volunteer">VOLUNTEER</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#programs">OUR PROGRAMS</a><!-- #about -->
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="blog">BLOG</a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#contact">CONTACT</a><!--  -->
-                    </li>
-                    <!-- <li>
-                        <a class="page-scroll" href="#contact">FEEDBACK</a>
-                    </li> -->
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container-fluid -->
-    </nav>
-
-    <!-- Header -->
-    <header>
-        <div class="container">
-            <div class="intro-text">
-                <div class="intro-lead-in">Participate . Engage . Empower</div>
-                <div class="intro-heading">Let's create futures</div>
-                <a href="#portfolio" class="page-scroll btn btn-xl">Activities</a>
-            </div>
-        </div>
-        <!-- <div style="position: fixed;bottom: 15px;left: 15px;z-index: 100;padding: 10px;border-radius: 10px;border: solid #d9534f 1px;width: 250px;">
-            <a href="http://icfn.in/tcsworld10k/creating-future/"><img src="http://tcsworld10k.procamrunning.in/img/images/clients/tc10/cssimage/tcs-logo.png" style="max-width: 100%;"></a><br><br>  
-            <a href="#MarathonModal5" class="portfolio-link" data-toggle="modal"><button class="btn btn-danger">Run to Create Futures</button></a>
-        </div> -->
-        <div id="slides">
-            <div class="slides-container">
-              <img src="img/slides/12.jpg" alt="Creating_Futures">
-              <img src="img/slides/13.jpg" alt="Creating_Futures">
-              <img src="img/slides/14.jpg" alt="Creating_Futures">
-              <img src="img/slides/11.jpg" alt="Creating_Futures">
-            </div>
-        </div>
-    </header>
-
-    <!-- Events/Activities Grid Section -->
-    <section id="portfolio" class="bg-light-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Activities & Events</h2>
-                    <h3 class="section-subheading text-muted">Take a look at our activities</h3>
+    <body id="page-top" class="index">
+        <!-- Code to include the facebok sdk -->
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v3.2"></script>
+        <!-- Navigation -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header page-scroll">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand page-scroll" href="#page-top"><!-- Creating Futures --></a>
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/roundicons.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Education to Employability </h4>
-                        <p class="text-muted">E2E Workshop at Dreams Foundation</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/startup-framework.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Workshop @ St.Josephs </h4>
-                        <p class="text-muted">3rd workshop for the students of St.Joseph</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/treehouse.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Volunteer Enrolment</h4>
-                        <p class="text-muted">Volunteers are the backbone of our organization</p>
-                    </div>
-                </div>
-                <!-- <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/golden.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Golden</h4>
-                        <p class="text-muted">Website Design</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/escape.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Escape</h4>
-                        <p class="text-muted">Website Design</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/portfolio/dreams.png" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Dreams</h4>
-                        <p class="text-muted">Website Design</p>
-                    </div>
-                </div> -->
-            </div>
-        </div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">About US</h2>
-                    <h3 class="section-subheading text-muted">Creating Futures is a non-profit and non-government organization aiming to create employment opportunities.</h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <ul class="timeline">
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <!--  <li >
+                             <a href="#page-top">HOME</a>
+                         </li> -->
                         <li>
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/1.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    
-                                    <h4 class="subheading">Our Story </h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Skilled manpower is one of the most vital aspects in today’s competitive world. Organizations are in constant need for trained and skilled workforce to address its growing demands.<a href="#storyModal4" class="portfolio-link" data-toggle="modal"> Learn more</a></p>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/2.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    
-                                    <h4 class="subheading">Creating Futures is Born </h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Given this urgent need for capability development and to tackle unemployment, the idea of Creating Futures was born. We believe that education empowers us.<a href="#storyModal4" class="portfolio-link" data-toggle="modal"> Learn more</a></p>
-                                </div>
-                            </div>
+                            <a class="page-scroll" href="#page-top">HOME</a>
                         </li>
                         <li>
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/3.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4 class="subheading">Our Goals</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Enable employment among educated youth (Education to Employability)<br>We aim to build and train the educated rural and urban youth from economically less <a href="#storyModal6" class="portfolio-link" data-toggle="modal"> Learn more</a></p> </div>
-                            </div>
+                            <a class="page-scroll" href="#about">OUR STORY</a><!-- #ABOUT -->
                         </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <img class="img-circle img-responsive" src="img/about/4.jpg" alt="">
-                            </div>
-                            <div class="timeline-panel">
-                                <div class="timeline-heading">
-                                    <h4>&nbsp;&nbsp;&nbsp;&nbsp;</h4>
-                                    <h4 class="subheading">Objectives of Creating Futures</h4>
-                                </div>
-                                <div class="timeline-body">
-                                    <p class="text-muted">Creating Futures will work towards the achievement of these through two complementary programs: <a href="#storyModal7" class="portfolio-link" data-toggle="modal"> Learn more</a></p>
-                                </div>
-                            </div>
+                        <li>
+                            <a class="page-scroll" href="#impact">IMPACT</a><!-- #impact -->
                         </li>
-                        <li class="timeline-inverted">
-                            <div class="timeline-image">
-                                <h4>Be Part
-                                    <br>Of Our
-                                    <br>Story!</h4>
-                            </div>
+                        <!-- <li>
+                            <a class="page-scroll" href="#family">OUR FAMILY</a>
+                        </li> -->
+                        <li>
+                            <a class="page-scroll" href="#partner">GET INVOLVED</a><!-- #partner -->
                         </li>
+                        <li>
+                            <a class="page-scroll" href="#volunteer">VOLUNTEER</a><!-- #volunteer -->
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#programs">OUR PROGRAMS</a><!-- #programs -->
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="blog">BLOG</a><!--Blog  -->
+                        </li>
+                        <li>
+                            <a class="pge-scroll" href="#gallery">GALLERY</a><!-- #gallery -->
+                        </li>
+                        <li>
+                            <a class="page-scroll" href="#contact">CONTACT</a><!--Contact  -->
+                        </li>
+                        
+                            <!-- <li>
+                                <a class="page-scroll" href="#contact">FEEDBACK</a>
+                            </li> -->
                     </ul>
                 </div>
+                <!-- /.navbar-collapse -->
             </div>
-        </div>
-    </section>
+            <!-- /.container-fluid -->
+        </nav>
 
-    <!-- Impact Section -->
-    <section id="impact" class="bg-light-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Impact</h2>
-                    <h3 class="section-subheading text-muted">We believe that we have made a small difference.  Some insights on the impact that we have made in this short journey of ours. </h3>
+        <!-- Header -->
+        <header>
+            <div class="container">
+                <div class="intro-text">
+                    <div class="intro-lead-in">Participate . Engage . Empower</div>
+                    <div class="intro-heading">Let's create futures</div>
+                    <a href="#portfolio" class="page-scroll btn btn-xl">Activities</a>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <img src="img/team/1.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Job Enhancement Skills</h4>
-                        <p class="text-muted">Over 200 students trained. More than 15 Soft-skills training modules created.</p>
-                        <!-- <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul> -->
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <img src="img/team/2.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Volunteers</h4>
-                        <p class="text-muted">Over 80 volunteers part of the Creating Futures Journey. Average of 8 volunteers per workshop</p>
-                        <!-- <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul> -->
-                    </div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="team-member">
-                        <img src="img/team/3.jpg" class="img-responsive img-circle" alt="">
-                        <h4>Collaborative Network</h4>
-                        <p class="text-muted">Partnered with corporates, NGO’s and Colleges to meet the stated objectives</p>
-                        <!-- <ul class="list-inline social-buttons">
-                            <li><a href="#"><i class="fa fa-twitter"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-facebook"></i></a>
-                            </li>
-                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                            </li>
-                        </ul> -->
-                    </div>
+            <!-- <div style="position: fixed;bottom: 15px;left: 15px;z-index: 100;padding: 10px;border-radius: 10px;border: solid #d9534f 1px;width: 250px;">
+                <a href="http://icfn.in/tcsworld10k/creating-future/"><img src="http://tcsworld10k.procamrunning.in/img/images/clients/tc10/cssimage/tcs-logo.png" style="max-width: 100%;"></a><br><br>  
+                <a href="#MarathonModal5" class="portfolio-link" data-toggle="modal"><button class="btn btn-danger">Run to Create Futures</button></a>
+            </div> -->
+            <div id="slides">
+                <div class="slides-container">
+                    <img src="img/slides/12.jpg" alt="Creating_Futures">
+                    <img src="img/slides/13.jpg" alt="Creating_Futures">
+                    <img src="img/slides/14.jpg" alt="Creating_Futures">
+                    <img src="img/slides/11.jpg" alt="Creating_Futures">
                 </div>
             </div>
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <p class="large text-muted text-left"> <i>“ As an individual, I got so much knowledge about resume writing, small talk, group discussion, do's and don'ts in every stage of interview. Tottally it was the best training I have attended till now! ” </i><b>–Bhoomika, a student from Davengere</b><br><br>Creating Futures aims to continue in its mission through a range of programs and a collaborative network of volunteers, NGOs, Corporates and Colleges. We invite you to be part of this journey</p>
-                </div>
-            </div>
-            
-        </div>
-    </section>
+        </header>
 
-    <!-- Partner Section -->
-    <section id="partner">
-        <div class="partner-content">
+        <!-- Events/Activities Grid Section -->
+        <section id="portfolio" class="bg-light-gray">
+          
             <div class="container">
                 <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">Activities & Events</h2>
+                        <h3 class="section-subheading text-muted">Take a look at our activities. Like and follow our page on <a href="https://www.facebook.com/EducationtoEmployability/">facebook</a> for regular updates </h3>
+                    </div>
+                </div>
+                <div class="row" style="text-align: center">
+                    <div class="fb-page" data-href="https://www.facebook.com/EducationtoEmployability/" data-tabs="timeline" data-width="700" data-height="" data-small-header="true" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="true"><blockquote cite="https://www.facebook.com/EducationtoEmployability/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/EducationtoEmployability/">Creating Futures</a></blockquote></div>
+                </div>
+<!--                <div class="row">
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a href="#portfolioModal1" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/portfolio/roundicons.png" class="img-responsive" alt="">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4> Education to Employability </h4>
+                            <p class="text-muted">E2E Workshop at Dreams Foundation</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a href="#portfolioModal2" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/portfolio/startup-framework.png" class="img-responsive" alt="">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>Workshop @ St.Josephs </h4>
+                            <p class="text-muted">3rd workshop for the students of St.Joseph</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a href="#portfolioModal3" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/portfolio/treehouse.png" class="img-responsive" alt="">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>Volunteer Enrolment</h4>
+                            <p class="text-muted">Volunteers are the backbone of our organization</p>
+                        </div>
+                    </div>
+                     <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a href="#portfolioModal4" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/portfolio/golden.png" class="img-responsive" alt="">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>Golden</h4>
+                            <p class="text-muted">Website Design</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a href="#portfolioModal5" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/portfolio/escape.png" class="img-responsive" alt="">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>Escape</h4>
+                            <p class="text-muted">Website Design</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a href="#portfolioModal6" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/portfolio/dreams.png" class="img-responsive" alt="">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>Dreams</h4>
+                            <p class="text-muted">Website Design</p>
+                        </div>
+                    </div> 
+                </div>-->
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">About US</h2>
+                        <h3 class="section-subheading text-muted">Creating Futures is a non-profit and non-government organization aiming to create employment opportunities.</h3>
+                    </div>
+                </div>
+                <div class="row">
                     <div class="col-lg-12">
-                        <div class="container">
-                            <!-- Project Details Go Here -->
-                            <h2>Partner with Us <span>or</span> <a href="#volunteer" class="page-scroll" style="text-decoration: none;">Volunteer</a></h2>
-                            <p class="item-intro text-muted">Creating Futures is in its infancy, and we need your support, involvement and contribution.</p>
-                            <div class="row">
-                                <div class="col-sm-4">
+                        <ul class="timeline">
+                            <li>
+                                <div class="timeline-image">
+                                    <img class="img-circle img-responsive" src="img/about/1.jpg" alt="">
+                                </div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+
+                                        <h4 class="subheading">Our Story </h4>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p class="text-muted">Skilled manpower is one of the most vital aspects in today’s competitive world. Organizations are in constant need for trained and skilled workforce to address its growing demands.<a href="#storyModal4" class="portfolio-link" data-toggle="modal"> Learn more</a></p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted">
+                                <div class="timeline-image">
+                                    <img class="img-circle img-responsive" src="img/about/2.jpg" alt="">
+                                </div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+
+                                        <h4 class="subheading">Creating Futures is Born </h4>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p class="text-muted">Given this urgent need for capability development and to tackle unemployment, the idea of Creating Futures was born. We believe that education empowers us.<a href="#storyModal4" class="portfolio-link" data-toggle="modal"> Learn more</a></p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="timeline-image">
+                                    <img class="img-circle img-responsive" src="img/about/3.jpg" alt="">
+                                </div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h4 class="subheading">Our Goals</h4>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p class="text-muted">Enable employment among educated youth (Education to Employability)<br>We aim to build and train the educated rural and urban youth from economically less <a href="#storyModal6" class="portfolio-link" data-toggle="modal"> Learn more</a></p> </div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted">
+                                <div class="timeline-image">
+                                    <img class="img-circle img-responsive" src="img/about/4.jpg" alt="">
+                                </div>
+                                <div class="timeline-panel">
+                                    <div class="timeline-heading">
+                                        <h4>&nbsp;&nbsp;&nbsp;&nbsp;</h4>
+                                        <h4 class="subheading">Objectives of Creating Futures</h4>
+                                    </div>
+                                    <div class="timeline-body">
+                                        <p class="text-muted">Creating Futures will work towards the achievement of these through two complementary programs: <a href="#storyModal7" class="portfolio-link" data-toggle="modal"> Learn more</a></p>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="timeline-inverted">
+                                <div class="timeline-image">
+                                    <h4>Be Part
+                                        <br>Of Our
+                                        <br>Story!</h4>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Impact Section -->
+        <section id="impact" class="bg-light-gray">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">Impact</h2>
+                        <h3 class="section-subheading text-muted">We believe that we have made a small difference.  Some insights on the impact that we have made in this short journey of ours. </h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="team-member">
+                            
+                            <img src="img/team/1.jpg" class="img-responsive img-circle" alt="">
+                            <div class="overlay">
+                                <div class="text">
+                                
+                                    <ul>
+                                        <li> <b>2500</b> students trained </li>
+
+                                        <li><b>600</b> sessions (and counting)</li>
+
+                                        <li><b>40</b> training modules</li>
                                         
+                                    </ul>
+                                   
+                                  </div>
+                               
+                            </div>
+                            <h4>Skill Development</h4>
+                            <p class="text-muted">Over <b>2500</b> students trained and over <b>600</b> sessions conducted. More than <b>40</b> training modules created</p>
+                            
+                           <!-- <img src="img/team/1.jpg" class="img-responsive img-circle" alt="">
+                            <h4>Skill Development</h4>
+                            <p class="text-muted">Over <b>2500</b> students trained and over <b>600</b> sessions conducted. More than <b>40</b> training modules created</p> -->
+                           
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="team-member">
+                            <img src="img/team/2.jpg" class="img-responsive img-circle" alt="">
+                           <div class="overlay">
+                                <div class="text">
+                                    <ul>
+                                        
+                                        <li>
+                                            <b>240</b> volunteers 
+                                        </li>
+                                    
+                                        <li>
+                                            <b>7000</b> hours
+                                        </li>
+                                     </ul>
+                                   
+                                  </div>
+                               
+                            </div>
+                            <h4>Volunteers</h4>
+                            <p class="text-muted">Over <b>240</b> volunteers are a part of the Creating Futures Journey, with over <b>7000</b> hours of volunteering efforts</p>
+                            <!-- <ul class="list-inline social-buttons">
+                                <li><a href="#"><i class="fa fa-twitter"></i></a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                                </li>
+                            </ul> -->
+                        </div>
+                    </div>
+                    <div class="col-sm-4">
+                        <div class="team-member">
+                            <img src="img/team/3.jpg" class="img-responsive img-circle" alt="">
+                            <div class="overlay">
+                                <div class="text">
+                                    <ul>
+                                        <li>
+                                            over <b>20</b> collaborations
+                                        </li>
+                                    </ul>
+                                   
+                                  </div>
+                               
+                            </div>
+                            <h4>Collaborative Network</h4>
+                            <p class="text-muted">Partnered with over <b>20</b> Corporates, NGO’s and Colleges to meet the stated objectives</p>
+                            <!-- <ul class="list-inline social-buttons">
+                                <li><a href="#"><i class="fa fa-twitter"></i></a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-facebook"></i></a>
+                                </li>
+                                <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                                </li>
+                            </ul> -->
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-8 col-lg-offset-2 text-center">
+                        <p class="large text-muted text-left"> <i>“ As an individual, I got so much knowledge about resume writing, small talk, group discussion, do's and don'ts in every stage of interview. Tottally it was the best training I have attended till now! ” </i><b>–Bhoomika, a student from Davengere</b><br><br>Creating Futures aims to continue in its mission through a range of programs and a collaborative network of volunteers, NGOs, Corporates and Colleges. We invite you to be part of this journey</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Partner Section -->
+        <section id="partner">
+            <div class="partner-content">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="container">
+                                <!-- Project Details Go Here -->
+                                <h2>Partner with Us <span>or</span> <a href="#volunteer" class="page-scroll" style="text-decoration: none;">Volunteer</a></h2>
+                                <p class="item-intro text-muted">Creating Futures is in its infancy, and we need your support, involvement and contribution.</p>
+                                <div class="row">
+                                    <div class="col-sm-4">
+
                                         <h4>As a Non-Profit organization or a College,</h4>
                                         <p class="text-muted"> </p>
                                         <ul class="text-left">
                                             <li>You can partner will us so that we can train your beneficiaries as part of their skill development. We believe that this will significantly -iincrease the career options of the students.</li>
                                         </ul>
-                                </div>
-                                <div class="col-sm-4">
-                                    
-                                        
+                                    </div>
+                                    <div class="col-sm-4">
+
+
                                         <h4>As an organisation, you can support by </h4>
                                         <p class="text-muted"></p>
                                         <ul class="text-left">
@@ -396,11 +483,11 @@
                                             <li>Assign “Real-Life” projects that interns can work on</li>
                                             <li>Provide infrastructure support, such as office environment and IT facility during weekends</li>
                                         </ul>
-                                    
-                                </div>
-                                <div class="col-sm-4">
-                                    
-                                        
+
+                                    </div>
+                                    <div class="col-sm-4">
+
+
                                         <h4>As a recruitment agency, you can </h4>
                                         <p class="text-muted"></p>
                                         <ul class="text-left">
@@ -410,23 +497,23 @@
                                             <li>Provide short-term job contracts and post-internship placement for internal job assignments</li>
                                             <li>Provide infrastructure support, such as office environment and IT facility during weekends</li>
                                         </ul>
-                                    
+
+                                    </div>
                                 </div>
+                                <p>Irrespective of whether you are an individual, an organization, or an NGO, we welcome your partnership and support.</p>
+                                <p>For more information, please write to us at <a href="mailto:volunteer@creatingfutures.in">volunteer@creatingfutures.in</a>.</p>
+                                <!-- </p>
+                                    
+                                <p class="item-intro text-muted"> -->
                             </div>
-                            <p>Irrespective of whether you are an individual, an organization, or an NGO, we welcome your partnership and support.</p>
-                            <p>For more information, please write to us at <a href="mailto:volunteer@creatingfutures.in">volunteer@creatingfutures.in</a>.</p>
-                            <!-- </p>
-                                
-                            <p class="item-intro text-muted"> -->
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Volunteer Section -->
-    <section id="volunteer">
+        <!-- Volunteer Section -->
+        <section id="volunteer">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-12 text-center">
@@ -467,16 +554,16 @@
                                         </div>
                                         <p class="help-block text-danger"></p>
                                     </div>
-                                    
-                                        <div class="form-group">
-                                            <input type="text" class="form-control" name="location" placeholder="Your Location " id="location">
-                                            <p class="help-block text-danger"></p>
-                                        </div>
-                                        <div class="form-group">       
-                                            <textarea class="form-control" name="message" placeholder="Area of interest *" id="message" required data-validation-required-message="Please enter Area of interest."></textarea>
-                                        
-                                            <p class="help-block text-danger"></p>
-                                        </div>
+
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" name="location" placeholder="Your Location " id="location">
+                                        <p class="help-block text-danger"></p>
+                                    </div>
+                                    <div class="form-group">       
+                                        <textarea class="form-control" name="message" placeholder="Area of interest *" id="message" required data-validation-required-message="Please enter Area of interest."></textarea>
+
+                                        <p class="help-block text-danger"></p>
+                                    </div>
                                 </div>
                                 <div class="clearfix"></div>
                                 <div class="col-lg-12 text-warning text-center form-group">*We will not provide your personal identifying information (e.g., name, contact information or volunteer information) to third parties</div>
@@ -489,443 +576,533 @@
                     </div>
                 </div>
             </div>
-    </section>
+        </section>
 
-    <!-- Our Programs Section -->
-    <section id="programs" class="bg-light-gray">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Our Programs</h2>
-                    <h3 class="section-subheading text-muted">We aim to provide several Value Addition programs to the needy youth. </h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#ProgramsModal1" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/ourprograms/pgm1.jpg" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Internship Programs</h4>
-                        <p class="text-muted">Experiencing real time projects, and trainings for the youth to be corporate ready</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#ProgramsModal2" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/ourprograms/pgm2.jpg" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>E2E Program</h4>
-                        <p class="text-muted">Empowering college students with Personal & Professional Effectiveness tools</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#ProgramsModal3" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/ourprograms/pgm3.jpg" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Spoken English</h4>
-                        <p class="text-muted">Dedicated at improving Spoken English skills. <br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#ProgramsModal4" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/ourprograms/pgm4.jpg" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Life skills Program</h4>
-                        <p class="text-muted">Enabling competencies to positively adapt and flourish in the society</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#ProgramsModal5" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/ourprograms/pgm5.jpg" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Career Counselling &amp; Guidance</h4>
-                        <p class="text-muted">Beaconing youth in making the Right Career choices</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#ProgramsModal6" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/ourprograms/pgm6.jpg" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Teacher Development</h4>
-                        <p class="text-muted">Expanding the Skill Repertoire of Teachers to increase their effectiveness</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#ProgramsModal7" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/ourprograms/pgm7.jpg" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Computer Skills</h4>
-                        <p class="text-muted">Equipping students with Basic Computer Knowledge & Skills</p>
-                    </div>
-                </div>
-
-
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#ProgramsModal8" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/ourprograms/pgm8.jpg" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Emotional Management</h4>
-                        <p class="text-muted">Enabling the youth to be Emotionally Strong</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#ProgramsModal9" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/ourprograms/pgm9.jpg" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Wellbeing Programmes</h4>
-                        <p class="text-muted">An endeavour to work with youth in difficult life situations instilling self worthiness</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#ProgramsModal10" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/ourprograms/pgm10.jpg" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Soft skills</h4>
-                        <p class="text-muted">Mastering Soft Skills for an impactful career journey</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#ProgramsModal11" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/ourprograms/pgm11.jpg" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Whole School development</h4>
-                        <p class="text-muted">Building a foundation for a Holistic & Sustainable educational experience</p>
-                    </div>
-                </div>
-                <div class="col-md-4 col-sm-6 portfolio-item">
-                    <a href="#ProgramsModal12" class="portfolio-link" data-toggle="modal">
-                        <div class="portfolio-hover">
-                            <div class="portfolio-hover-content">
-                                <i class="fa fa-plus fa-3x"></i>
-                            </div>
-                        </div>
-                        <img src="img/ourprograms/pgm12.jpg" class="img-responsive" alt="">
-                    </a>
-                    <div class="portfolio-caption">
-                        <h4>Personality Development</h4>
-                        <p class="text-muted">Creating an Awareness and Encouraging to Live Responsibly</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>    
-
-    <!-- Contact Section -->
-    <section id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2 class="section-heading">Contact Us</h2>
-                    <h3 class="section-subheading text-muted">We love to hear from you</h3>
-                </div>
-            </div>
-            <div class="row text-center">
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-share fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Connect with us</h4>
-                    <ul class="list-inline social-buttons">
-                        <li><a href="https://twitter.com/cr8ingfutures"><i class="fa fa-twitter"></i></a>
-                        </li>
-                        <li><a href="https://www.facebook.com/EducationtoEmployability/"><i class="fa fa-facebook"></i></a>
-                        </li>
-                        <li><a href="https://www.linkedin.com/company/creating-futures"><i class="fa fa-linkedin"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-map-marker fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Address</h4>
-                    <p class="text-muted"><b>Head Office:</b> 101B, Stag Aditya, 1st Main, Ashwini Layout, Koramangala 6th Block Extn., Bangalore – 560047</p>
-                </div>
-                <div class="col-md-4">
-                    <span class="fa-stack fa-4x">
-                        <i class="fa fa-circle fa-stack-2x text-primary"></i>
-                        <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
-                    </span>
-                    <h4 class="service-heading">Reach Us</h4>
-                    <p class="text-muted"><a href="mailto:info@creatingfutures.in"> info@creatingfutures.in</a> <br> <a href="tel:+91-9845132192">+91-9845132192</a></p>
-                </div>
-                <div class="col-md-12 top40">
-                <p>Like to be a part of Creating Futures? Please write to us at <a href="mailto:volunteer@creatingfutures.in">volunteer@creatingfutures.in</a>.</p></div>
-            </div>
-        </div>
-    </section>
-    
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <span class="copyright">Copyright &copy; 2015 Creating Futures. </span>
-                </div>
-                <!-- <div class="col-md-4">
-                    <ul class="list-inline social-buttons">
-                        <li><a href="#"><i class="fa fa-twitter"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-facebook"></i></a>
-                        </li>
-                        <li><a href="#"><i class="fa fa-linkedin"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <ul class="list-inline quicklinks">
-                        <li><a href="#">Privacy Policy</a>
-                        </li>
-                        <li><a href="#">Terms of Use</a>
-                        </li>
-                    </ul>
-                </div> -->
-            </div>
-        </div>
-    </footer>
-
-    <!-- Portfolio Modals -->
-    
-    <!-- Portfolio Modal 1 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
-            </div>
+        <!-- Our Programs Section -->
+        <section id="programs" class="bg-light-gray">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2>Education to Employability</h2>
-                            <p class="item-intro text-muted">Education to Employability Workshop at Dreams Foundation</p>
-                            <img class="img-responsive" src="img/portfolio/roundicons-free.png" alt="">
-                            <p>An “Education to Employability” Workshop was conducted for the students at Dreams Foundations.  We had 17 students attending the workshop which spanned across 3 weeks. The workshop focused on teaching and building the skills required for employment. The workshop was an interactive workshop where the students put into practice the various skills that was imparted.</p><strong>Comments from our students</strong><br><br><p class="text-left">“I would like to thank Creating Futures, through which I got an opportunity to come here and gain more knowledge about job skills and other skills. These will help me later to get success.” <br><b>~ Uzma Firdose</b><br><br>“I am feeling happy, really! The class was very good and I have been learning more skills. My request is to keep this workshop again”. <br><b>~ Rupesh P</b></p>
-                            <!-- <p>
-                                <strong>Want these icons in this portfolio item sample?</strong>You can download 60 of them for free, courtesy of <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">RoundIcons.com</a>, or you can purchase the 1500 icon set <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">here</a>.</p>
-                            <ul class="list-inline">
-                                <li>Date: July 2014</li>
-                                <li>Client: Round Icons</li>
-                                <li>Category: Graphic Design</li>
-                            </ul> -->
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">Our Programs</h2>
+                        <h3 class="section-subheading text-muted">We aim to provide several Value Addition programs to the needy youth. </h3>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a href="#ProgramsModal1" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/ourprograms/pgm1.jpg" class="img-responsive" alt="">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>Internship Programs</h4>
+                            <p class="text-muted">Experiencing real time projects, and trainings for the youth to be corporate ready</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a href="#ProgramsModal2" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/ourprograms/pgm2.jpg" class="img-responsive" alt="">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>E2E Program</h4>
+                            <p class="text-muted">Empowering college students with Personal & Professional Effectiveness tools</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a href="#ProgramsModal3" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/ourprograms/pgm3.jpg" class="img-responsive" alt="">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>Spoken English</h4>
+                            <p class="text-muted">Dedicated at improving Spoken English skills. <br/>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a href="#ProgramsModal4" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/ourprograms/pgm4.jpg" class="img-responsive" alt="">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>Life skills Program</h4>
+                            <p class="text-muted">Enabling competencies to positively adapt and flourish in the society</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a href="#ProgramsModal5" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/ourprograms/pgm5.jpg" class="img-responsive" alt="">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>Career Counselling &amp; Guidance</h4>
+                            <p class="text-muted">Beaconing youth in making the Right Career choices</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a href="#ProgramsModal6" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/ourprograms/pgm6.jpg" class="img-responsive" alt="">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>Teacher Development</h4>
+                            <p class="text-muted">Expanding the Skill Repertoire of Teachers to increase their effectiveness</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a href="#ProgramsModal7" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/ourprograms/pgm7.jpg" class="img-responsive" alt="">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>Computer Skills</h4>
+                            <p class="text-muted">Equipping students with Basic Computer Knowledge & Skills</p>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a href="#ProgramsModal8" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/ourprograms/pgm8.jpg" class="img-responsive" alt="">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>Emotional Management</h4>
+                            <p class="text-muted">Enabling the youth to be Emotionally Strong</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a href="#ProgramsModal9" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/ourprograms/pgm9.jpg" class="img-responsive" alt="">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>Wellbeing Programmes</h4>
+                            <p class="text-muted">An endeavour to work with youth in difficult life situations instilling self worthiness</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a href="#ProgramsModal10" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/ourprograms/pgm10.jpg" class="img-responsive" alt="">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>Soft skills</h4>
+                            <p class="text-muted">Mastering Soft Skills for an impactful career journey</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a href="#ProgramsModal11" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/ourprograms/pgm11.jpg" class="img-responsive" alt="">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>Whole School development</h4>
+                            <p class="text-muted">Building a foundation for a Holistic & Sustainable educational experience</p>
+                        </div>
+                    </div>
+                    <div class="col-md-4 col-sm-6 portfolio-item">
+                        <a href="#ProgramsModal12" class="portfolio-link" data-toggle="modal">
+                            <div class="portfolio-hover">
+                                <div class="portfolio-hover-content">
+                                    <i class="fa fa-plus fa-3x"></i>
+                                </div>
+                            </div>
+                            <img src="img/ourprograms/pgm12.jpg" class="img-responsive" alt="">
+                        </a>
+                        <div class="portfolio-caption">
+                            <h4>Personality Development</h4>
+                            <p class="text-muted">Creating an Awareness and Encouraging to Live Responsibly</p>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        </section>    
 
-    <!-- Portfolio Modal 2 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
-                </div>
+         <!-- Gallery Section -->
+        <section id="gallery" >
+            <div id="caption1" style="display:none">
+                <h4>Wellbeing Programs</h4>
+                <p>Glimpse from our recent wellbeing program at Rainbow Home, Chamrajpet, Bangalore</p>
             </div>
+            <div class="caption2" style="display:none">
+                <h4>Wellbeing Programs</h4>
+                <p>Glimpse from our recent wellbeing program at Rainbow Home, Chamrajpet, Bangalore</p>
+            </div>  
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>Workshop at St.Josephs</h2>
-                            <p class="item-intro text-muted">A two weeks Workshop at St.Josephs  College</p>
-                            <img class="img-responsive img-centered" src="img/portfolio/startup-framework-preview.png" alt="">
-                            <p>Our association with St. Josephs Evening continues this year as well. We had the privilege to conduct the 3rd workshop for the students of St. Joseph. The workshop was held at the college premises and 25 students from the Commerce, Arts and Management Stream participated. As part of this workshop, eight modules were covered over the course of 2 weeks. A big “thank you” to the volunteers. We had about 20 volunteers for this event</p><strong>Comments from our students</strong><br><br><p class="text-left">“The training on education to employability was very helpful for me, I learnt so many new things out of it and I felt these classes were a big asset to me. Thank you for your wonderful and valuable class. ” <br><b>~ Damodaran S</b><br><br>“Extraordinary training . Thank you for providing a wonderful training. Everything is good. Trainers are good particularly”  <br><b>~ Sadiq Pasha</b><br><br>“It helped me to build up my self confidence. I had a very good experience for facing the interview”. <br><b> ~ Swetha G</b></p>
-                            
-                            <!-- <p><a href="http://designmodo.com/startup/?u=787">Startup Framework</a> is a website builder for professionals. Startup Framework contains components and complex blocks (PSD+HTML Bootstrap themes and templates) which can easily be integrated into almost any design. All of these components are made in the same style, and can easily be integrated into projects, allowing you to create hundreds of solutions for your future projects.</p>
-                            <p>You can preview Startup Framework <a href="http://designmodo.com/startup/?u=787">here</a>.</p> -->
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">Gallery</h2>
+                        <h3 class="section-subheading text-muted">Some glimpses from our recent programs </h3>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
+                <div class="row" id="galleryslides">
 
-    <!-- Portfolio Modal 3 -->
-    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
-                    </div>
+                    <a href="img/gallery/15.jpg">
+                        <img src="img/gallery/15.jpg"  class="galleryThumbnail"/>
+                    </a>
+
+                    <a href="img/gallery/16.jpg" >
+                        <img src="img/gallery/16.jpg"  class="galleryThumbnail"/>
+                    </a>
+
+                    <a href="img/gallery/17.jpg">
+                        <img src="img/gallery/17.jpg"  class="galleryThumbnail"/>
+                    </a>
+
+                    <a href="img/gallery/18.jpg" >
+                        <img src="img/gallery/18.jpg"  class="galleryThumbnail"/>
+                    </a>
+
+                    <a href="img/gallery/19.jpg" >
+                        <img src="img/gallery/19.jpg"  class="galleryThumbnail"/>
+                    </a>
+
+                    <a href="img/gallery/20.jpg" >
+                        <img src="img/gallery/20.jpg"  class="galleryThumbnail"/>
+                    </a>
+                    
+                    <a href="img/gallery/21.jpg" >
+                        <img src="img/gallery/21.jpg" class="galleryThumbnail"/>
+                    </a>
+                    
+                    <a href="img/gallery/22.jpg" >
+                        <img src="img/gallery/22.jpg"  class="galleryThumbnail"/>
+                    </a>
+                    
+                    <a href="img/gallery/23.jpg" >
+                        <img src="img/gallery/23.jpg"  class="galleryThumbnail"/>
+                    </a>
+                    
+                    <a href="img/gallery/24.jpg" >
+                        <img src="img/gallery/24.jpg"  class="galleryThumbnail"/>
+                    </a>
+                    
+                    <a href="img/gallery/25.jpg" >
+                        <img src="img/gallery/25.jpg"  class="galleryThumbnail"/>
+                    </a>
+                    
+                    
+                    <a href="img/gallery/26.jpg" >
+                        <img src="img/gallery/26.jpg"  class="galleryThumbnail"/>
+                    </a>
+                    
+                    <a href="img/gallery/27.jpg" >
+                        <img src="img/gallery/27.jpg"  class="galleryThumbnail"/>
+                    </a>
+                    
+                    <a href="img/gallery/28.jpg" >
+                        <img src="img/gallery/28.jpg"  class="galleryThumbnail"/>
+                    </a>
+                    
+                    <a href="img/gallery/29.jpg" >
+                        <img src="img/gallery/29.jpg"  class="galleryThumbnail"/>
+                    </a>
+                    
+                    <a href="img/gallery/30.jpg" >
+                        <img src="img/gallery/30.jpg"  class="galleryThumbnail"/>
+                    </a>
+                    
+
                 </div>
             </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="bg-light-gray">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2>Volunteer Enrolment</h2>
-                            <p class="item-intro text-muted"></p>
-                            <img class="img-responsive img-centered" src="img/portfolio/treehouse-preview.png" alt="">
-                            <p class="text-left">Volunteers are the backbone of our organization. It is only because of the many volunteers that we have that we are able to achieve our objectives.We are constantly looking for volunteers to be part of our activities. You can be part of Creating Futures in any one of the below roles. </p>
-                            <ul class="text-left">
-                                <li> <b>Full time volunteering (dedicated)</b><br>–   Long Term (more than 3 months)<br>–   Short Term </li><br>
-                                <li> <b>Project based volunteering</b><br>–   Example – Create a website, Define a curriculum, etc</li><br>
-                                <li> <b>Task based</b><br>–   Example – teach a student every weekend, taking one training session, etc</li><br>
-                                <li> <b>Association / Role based</b><br>–   Example – As part of Creating Futures, do the accounts every month end, manage volunteers, event management, etc</li>
-                            </ul>
-
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
-                        </div>
+                    <div class="col-lg-12 text-center">
+                        <h2 class="section-heading">Contact Us</h2>
+                        <h3 class="section-subheading text-muted">We love to hear from you</h3>
                     </div>
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Portfolio Modal 4 -->
-    <div class="portfolio-modal modal fade" id="storyModal4" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fa fa-share fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="service-heading">Connect with us</h4>
+                        <ul class="list-inline social-buttons">
+                            <li><a href="https://twitter.com/cr8ingfutures"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="https://www.facebook.com/EducationtoEmployability/"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="https://www.linkedin.com/company/creating-futures"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
                     </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fa fa-map-marker fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="service-heading">Address</h4>
+                        <p class="text-muted"><b>Head Office:</b> 101B, Stag Aditya, 1st Main, Ashwini Layout, Koramangala 6th Block Extn., Bangalore – 560047</p>
+                    </div>
+                    <div class="col-md-4">
+                        <span class="fa-stack fa-4x">
+                            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+                            <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h4 class="service-heading">Reach Us</h4>
+                        <p class="text-muted"><a href="mailto:info@creatingfutures.in"> info@creatingfutures.in</a> <br> <a href="tel:+91-9845132192">+91-9845132192</a></p>
+                    </div>
+                    <div class="col-md-12 top40">
+                        <p>Like to be a part of Creating Futures? Please write to us at <a href="mailto:volunteer@creatingfutures.in">volunteer@creatingfutures.in</a>.</p></div>
                 </div>
             </div>
+        </section>
+
+
+        <footer>
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2>Our Story</h2>
-                            
-                            <p>Skilled manpower is one of the most vital aspects in today’s competitive world. Organizations are in constant need for trained and skilled workforce to address its growing demands. The current education system being academically-oriented, do not focus on the skills required to perform efficiently in a corporate environment. In today’s scenario, lakhs of students graduate each year and with the expected economic growth, the challenge of having a skilled workforce will multiply, since more and more jobs are expected to be skill-based jobs. Given the increased numbers of graduates and increase in skill-based jobs, there is an urgent need to address this. It is the students from the rural areas and many from the urban areas that are most affected, due to their lack of exposure to the enhanced skills. And in this scenario, thousands do not get employment leading to a cycle of poverty</p>
+                    <div class="col-md-12">
+                        <span class="copyright">Copyright &copy; 2019 Creating Futures. </span>
+                    </div>
+                    <!-- <div class="col-md-4">
+                        <ul class="list-inline social-buttons">
+                            <li><a href="#"><i class="fa fa-twitter"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a>
+                            </li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-md-4">
+                        <ul class="list-inline quicklinks">
+                            <li><a href="#">Privacy Policy</a>
+                            </li>
+                            <li><a href="#">Terms of Use</a>
+                            </li>
+                        </ul>
+                    </div> -->
+                </div>
+            </div>
+        </footer>
 
-                            <h2>Creating Futures is Born</h2>
-                            
-                            <p>Given this urgent need for capability development and to tackle unemployment, the idea of Creating Futures was born. We believe that education empowers us. It gives us the necessary skills and makes us capable enough to earn a living! In today’s world there is no dearth of educated people. But, there is a dearth is of “skilled” educated individuals. What’s important in today’s world is how you represent Yourself! </p><p>We believe that we can make a difference in building the required skills that will enable the beneficiaries in getting that great job. We believe that we can provide the necessary tools that will make them successful. To achieve this objective, we at Creating Futures have set up this non-profit and non-government organization driven by passionate individuals. </p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+        <!-- Portfolio Modals -->
+
+        <!-- Portfolio Modal 1 -->
+        <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2>Education to Employability</h2>
+                                <p class="item-intro text-muted">Education to Employability Workshop at Dreams Foundation</p>
+                                <img class="img-responsive" src="img/portfolio/roundicons-free.png" alt="">
+                                <p>An “Education to Employability” Workshop was conducted for the students at Dreams Foundations.  We had 17 students attending the workshop which spanned across 3 weeks. The workshop focused on teaching and building the skills required for employment. The workshop was an interactive workshop where the students put into practice the various skills that was imparted.</p><strong>Comments from our students</strong><br><br><p class="text-left">“I would like to thank Creating Futures, through which I got an opportunity to come here and gain more knowledge about job skills and other skills. These will help me later to get success.” <br><b>~ Uzma Firdose</b><br><br>“I am feeling happy, really! The class was very good and I have been learning more skills. My request is to keep this workshop again”. <br><b>~ Rupesh P</b></p>
+                                <!-- <p>
+                                    <strong>Want these icons in this portfolio item sample?</strong>You can download 60 of them for free, courtesy of <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">RoundIcons.com</a>, or you can purchase the 1500 icon set <a href="https://getdpd.com/cart/hoplink/18076?referrer=bvbo4kax5k8ogc">here</a>.</p>
+                                <ul class="list-inline">
+                                    <li>Date: July 2014</li>
+                                    <li>Client: Round Icons</li>
+                                    <li>Category: Graphic Design</li>
+                                </ul> -->
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Portfolio Modal 5 -->
-    <div class="portfolio-modal modal fade" id="storyModal5" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
+        <!-- Portfolio Modal 2 -->
+        <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <h2>Workshop at St.Josephs</h2>
+                                <p class="item-intro text-muted">A two weeks Workshop at St.Josephs  College</p>
+                                <img class="img-responsive img-centered" src="img/portfolio/startup-framework-preview.png" alt="">
+                                <p>Our association with St. Josephs Evening continues this year as well. We had the privilege to conduct the 3rd workshop for the students of St. Joseph. The workshop was held at the college premises and 25 students from the Commerce, Arts and Management Stream participated. As part of this workshop, eight modules were covered over the course of 2 weeks. A big “thank you” to the volunteers. We had about 20 volunteers for this event</p><strong>Comments from our students</strong><br><br><p class="text-left">“The training on education to employability was very helpful for me, I learnt so many new things out of it and I felt these classes were a big asset to me. Thank you for your wonderful and valuable class. ” <br><b>~ Damodaran S</b><br><br>“Extraordinary training . Thank you for providing a wonderful training. Everything is good. Trainers are good particularly”  <br><b>~ Sadiq Pasha</b><br><br>“It helped me to build up my self confidence. I had a very good experience for facing the interview”. <br><b> ~ Swetha G</b></p>
+
+                                <!-- <p><a href="http://designmodo.com/startup/?u=787">Startup Framework</a> is a website builder for professionals. Startup Framework contains components and complex blocks (PSD+HTML Bootstrap themes and templates) which can easily be integrated into almost any design. All of these components are made in the same style, and can easily be integrated into projects, allowing you to create hundreds of solutions for your future projects.</p>
+                                <p>You can preview Startup Framework <a href="http://designmodo.com/startup/?u=787">here</a>.</p> -->
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Portfolio Modal 6 -->
-    <div class="portfolio-modal modal fade" id="storyModal6" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
+        <!-- Portfolio Modal 3 -->
+        <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2>Our Goals</h2>
-                            <p class="item-intro text-muted">Enable employment among educated youth.</p>
-                            
-                            <p>We aim to build and train the educated rural and urban youth from economically less fortunate background in various skills and make them highly-capable corporate-ready resources to facilitate their employment. This initiative includes: </p><img class="img-responsive img-centered" src="img/about/goals.png" alt="">
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2>Volunteer Enrolment</h2>
+                                <p class="item-intro text-muted"></p>
+                                <img class="img-responsive img-centered" src="img/portfolio/treehouse-preview.png" alt="">
+                                <p class="text-left">Volunteers are the backbone of our organization. It is only because of the many volunteers that we have that we are able to achieve our objectives.We are constantly looking for volunteers to be part of our activities. You can be part of Creating Futures in any one of the below roles. </p>
+                                <ul class="text-left">
+                                    <li> <b>Full time volunteering (dedicated)</b><br>–   Long Term (more than 3 months)<br>–   Short Term </li><br>
+                                    <li> <b>Project based volunteering</b><br>–   Example – Create a website, Define a curriculum, etc</li><br>
+                                    <li> <b>Task based</b><br>–   Example – teach a student every weekend, taking one training session, etc</li><br>
+                                    <li> <b>Association / Role based</b><br>–   Example – As part of Creating Futures, do the accounts every month end, manage volunteers, event management, etc</li>
+                                </ul>
+
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Portfolio Modal 5 -->
-    <div class="portfolio-modal modal fade" id="storyModal7" tabindex="-1" role="dialog" aria-hidden="true">
+        <!-- Portfolio Modal 4 -->
+        <div class="portfolio-modal modal fade" id="storyModal4" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2>Our Story</h2>
+
+                                <p>Skilled manpower is one of the most vital aspects in today’s competitive world. Organizations are in constant need for trained and skilled workforce to address its growing demands. The current education system being academically-oriented, do not focus on the skills required to perform efficiently in a corporate environment. In today’s scenario, lakhs of students graduate each year and with the expected economic growth, the challenge of having a skilled workforce will multiply, since more and more jobs are expected to be skill-based jobs. Given the increased numbers of graduates and increase in skill-based jobs, there is an urgent need to address this. It is the students from the rural areas and many from the urban areas that are most affected, due to their lack of exposure to the enhanced skills. And in this scenario, thousands do not get employment leading to a cycle of poverty</p>
+
+                                <h2>Creating Futures is Born</h2>
+
+                                <p>Given this urgent need for capability development and to tackle unemployment, the idea of Creating Futures was born. We believe that education empowers us. It gives us the necessary skills and makes us capable enough to earn a living! In today’s world there is no dearth of educated people. But, there is a dearth is of “skilled” educated individuals. What’s important in today’s world is how you represent Yourself! </p><p>We believe that we can make a difference in building the required skills that will enable the beneficiaries in getting that great job. We believe that we can provide the necessary tools that will make them successful. To achieve this objective, we at Creating Futures have set up this non-profit and non-government organization driven by passionate individuals. </p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Portfolio Modal 5 -->
+        <div class="portfolio-modal modal fade" id="storyModal5" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Portfolio Modal 6 -->
+        <div class="portfolio-modal modal fade" id="storyModal6" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2>Our Goals</h2>
+                                <p class="item-intro text-muted">Enable employment among educated youth.</p>
+
+                                <p>We aim to build and train the educated rural and urban youth from economically less fortunate background in various skills and make them highly-capable corporate-ready resources to facilitate their employment. This initiative includes: </p><img class="img-responsive img-centered" src="img/about/goals.png" alt="">
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Portfolio Modal 5 -->
+        <div class="portfolio-modal modal fade" id="storyModal7" tabindex="-1" role="dialog" aria-hidden="true">
             <div class="modal-content">
                 <div class="close-modal" data-dismiss="modal">
                     <div class="lr">
@@ -939,470 +1116,483 @@
                             <div class="modal-body">
                                 <!-- Project Details Go Here -->
                                 <h2>Objectives of Creating Futures</h2>
-                                
+
                                 <p>Creating Futures will work towards the achievement of these through two complementary programs: </p><ul class="text-left">
-                                <li>  <b> Value-Addition Program</b><br>This is a short-duration (approximately, 10 days) program, and focuses on honing skills, predominantly soft skills, that will enable youth find employment, and aimed at educated youth, with minimum qualification of 12th standard. </li><br>
-                                <li>  <b> Practical, Real-Life Experience Program</b><br>This is a long-duration (approximately, 6-9 months) program, with primary focus on internship, and aimed at skills needed for the IT industry.</li>
+                                    <li>  <b> Value-Addition Program</b><br>This is a short-duration (approximately, 10 days) program, and focuses on honing skills, predominantly soft skills, that will enable youth find employment, and aimed at educated youth, with minimum qualification of 12th standard. </li><br>
+                                    <li>  <b> Practical, Real-Life Experience Program</b><br>This is a long-duration (approximately, 6-9 months) program, with primary focus on internship, and aimed at skills needed for the IT industry.</li>
                                 </ul> <p>
-                                Both these programs are aimed at the educated rural and urban youth from economically weak background.<br>We believe that we can make a difference in building the required skills that will enable the beneficiaries in getting that great job. We believe that we can provide the necessary tools that will make them successful. To achieve this objective, we at Creating Futures have set up this non-profit and non-government organization driven by passionate individuals. </p>
+                                    Both these programs are aimed at the educated rural and urban youth from economically weak background.<br>We believe that we can make a difference in building the required skills that will enable the beneficiaries in getting that great job. We believe that we can provide the necessary tools that will make them successful. To achieve this objective, we at Creating Futures have set up this non-profit and non-government organization driven by passionate individuals. </p>
                                 <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-    </div>
+        </div>
 
-    <!-- Programs Modal 1 -->
-    <div class="portfolio-modal modal fade" id="ProgramsModal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
+        <!-- Programs Modal 1 -->
+        <div class="portfolio-modal modal fade" id="ProgramsModal1" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2>Internship Program</h2>
-                            <p class="item-intro text-muted"></p>
-                            <img class="img-responsive" src="img/portfolio/roundicons-free.png" alt="">
-                            <p>Our Internship program prepares the college students and young professionals to become a well-rounded individual, having the right experience and expertise in their field of work. This is done by imparting to them the relevant skills in technologies, processes and soft skills that are required in the current job market.</p>
-                            <p>The program participants will receive a real-time project experience, necessary trainings and continued interactions with professionals in their area of work. Each participant will have a well-defined development path supported by experienced professionals. Besides this, mentors will be assigned to each of these participants.</p>
-                            <p>The program is for a duration of six months after which job placement opportunities will be provided.</p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2>Internship Program</h2>
+                                <p class="item-intro text-muted"></p>
+                                <img class="img-responsive" src="img/portfolio/roundicons-free.png" alt="">
+                                <p>Our Internship program prepares the college students and young professionals to become a well-rounded individual, having the right experience and expertise in their field of work. This is done by imparting to them the relevant skills in technologies, processes and soft skills that are required in the current job market.</p>
+                                <p>The program participants will receive a real-time project experience, necessary trainings and continued interactions with professionals in their area of work. Each participant will have a well-defined development path supported by experienced professionals. Besides this, mentors will be assigned to each of these participants.</p>
+                                <p>The program is for a duration of six months after which job placement opportunities will be provided.</p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Programs Modal 2 -->
-    <div class="portfolio-modal modal fade" id="ProgramsModal2" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
+        <!-- Programs Modal 2 -->
+        <div class="portfolio-modal modal fade" id="ProgramsModal2" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <h2>E2E Program</h2>
-                            <p class="item-intro text-muted">Education to Employability Program</p>
-                            <img class="img-responsive img-centered" src="img/portfolio/startup-framework-preview.png" alt="">
-                            <p>With many students passing out each year and with competition being extremely high in the job market, the need of the hour is to ensure that the students have a well rounded ability for them to land a job. This includes communication, presentation, interview skills, business etiquette and so on.</p>
-                            <p class="text-left">A personal effectiveness program is needed for enhancing their skills, create corporate awareness and enable the college students in being better prepared. We believe <b>Education to Employability</b> program will help enhance the needed skills.</p><p class="text-left"><strong>Objectives of the E2E program:</strong> To empower college students with tools for enhancing their personal and professional excellence, leading to improved employability and professional effectiveness.<br>
-                            </p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <h2>E2E Program</h2>
+                                <p class="item-intro text-muted">Education to Employability Program</p>
+                                <img class="img-responsive img-centered" src="img/portfolio/startup-framework-preview.png" alt="">
+                                <p>With many students passing out each year and with competition being extremely high in the job market, the need of the hour is to ensure that the students have a well rounded ability for them to land a job. This includes communication, presentation, interview skills, business etiquette and so on.</p>
+                                <p class="text-left">A personal effectiveness program is needed for enhancing their skills, create corporate awareness and enable the college students in being better prepared. We believe <b>Education to Employability</b> program will help enhance the needed skills.</p><p class="text-left"><strong>Objectives of the E2E program:</strong> To empower college students with tools for enhancing their personal and professional excellence, leading to improved employability and professional effectiveness.<br>
+                                </p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Programs Modal 3 -->
-    <div class="portfolio-modal modal fade" id="ProgramsModal3" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
+        <!-- Programs Modal 3 -->
+        <div class="portfolio-modal modal fade" id="ProgramsModal3" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2>Spoken English</h2>
-                            <p class="item-intro text-muted"></p>
-                            <img class="img-responsive img-centered" src="img/portfolio/treehouse-preview.png" alt="">
-                            <p>In today’s very competitive job environment, it is essential that the young professionals have the right level of English skill to be able to get the right job. This means the ability to converse, express, articulate in the best way possible. <br><br>Spoke English program is a dedicate program that will help the students in improving their spoken English skills by focusing on the vocabulary, sentences and using the right words. The objective is to train the students and develop confidence in speaking English, Simple Sentences, Social Conversation, word building, pronunciation and Basic grammar.</p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2>Spoken English</h2>
+                                <p class="item-intro text-muted"></p>
+                                <img class="img-responsive img-centered" src="img/portfolio/treehouse-preview.png" alt="">
+                                <p>In today’s very competitive job environment, it is essential that the young professionals have the right level of English skill to be able to get the right job. This means the ability to converse, express, articulate in the best way possible. <br><br>Spoke English program is a dedicate program that will help the students in improving their spoken English skills by focusing on the vocabulary, sentences and using the right words. The objective is to train the students and develop confidence in speaking English, Simple Sentences, Social Conversation, word building, pronunciation and Basic grammar.</p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Programs Modal 4 -->
-    <div class="portfolio-modal modal fade" id="ProgramsModal4" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
+        <!-- Programs Modal 4 -->
+        <div class="portfolio-modal modal fade" id="ProgramsModal4" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2>Life skills Program</h2>
-                            <p class="item-intro text-muted"></p>
-                            <img class="img-responsive img-centered" src="img/portfolio/treehouse-preview.png" alt="">
-                            <p><i>Life Skills are abilities for adaptive and positive behavior that enables individuals to deal effectively with the demands and challenges of everyday life</i> - (WHO). <br><br>Life Skills, in this context, are competencies that help students and young professionals function well in their environments. These are built in sequential steps depending on the student's background, circumstances, age and developmental stage. The necessary skills are then acquired through “learn-by-doing” activities.<br><br>Life Skills programs are very specific to students who need the special attention and focus which would help them in the career. This program will help in the personality development with the objective of overall grooming of students in social, private and public environments.<br>
-                            </p>
-                            
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2>Life skills Program</h2>
+                                <p class="item-intro text-muted"></p>
+                                <img class="img-responsive img-centered" src="img/portfolio/treehouse-preview.png" alt="">
+                                <p><i>Life Skills are abilities for adaptive and positive behavior that enables individuals to deal effectively with the demands and challenges of everyday life</i> - (WHO). <br><br>Life Skills, in this context, are competencies that help students and young professionals function well in their environments. These are built in sequential steps depending on the student's background, circumstances, age and developmental stage. The necessary skills are then acquired through “learn-by-doing” activities.<br><br>Life Skills programs are very specific to students who need the special attention and focus which would help them in the career. This program will help in the personality development with the objective of overall grooming of students in social, private and public environments.<br>
+                                </p>
 
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-    <div class="portfolio-modal modal fade" id="MarathonModal5" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
+        <div class="portfolio-modal modal fade" id="MarathonModal5" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2>Run with us and support our cause</h2>
-                            <p class="item-intro text-muted"></p>
-                            <img class="img-responsive img-centered" src="img/portfolio/treehouse-preview.png" alt="">
-                            <p>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2>Run with us and support our cause</h2>
+                                <p class="item-intro text-muted"></p>
+                                <img class="img-responsive img-centered" src="img/portfolio/treehouse-preview.png" alt="">
+                                <p>
 
-                            You can support us in the following ways
-                            <ul class="text-left pull-left">
-                                <li><b>Be a Corporate Sponsor </b>(for Corporate Organization). You can sponsor Creating Futures in one of the corporate categories. Or have fundraising campaigns  in your organization whereby you are engaging your teams in giving to the society</li>
-                                <li><b>As a Runner for the TCS W10K Event</b> where you can run for our cause and make a difference</li>
-                                <li><b>Donate to Creating Futures.</b> We encourage you and the employees of the organization to directly donate whereby supporting our cause</li>
-                                <li><b>Sponsor a Runner.</b> In the event that you cannot run, you could also sponsor a runner who  can run for our cause.</li>
-                            </ul>
-                            
-                            </p>
-                            
+                                    You can support us in the following ways
+                                <ul class="text-left pull-left">
+                                    <li><b>Be a Corporate Sponsor </b>(for Corporate Organization). You can sponsor Creating Futures in one of the corporate categories. Or have fundraising campaigns  in your organization whereby you are engaging your teams in giving to the society</li>
+                                    <li><b>As a Runner for the TCS W10K Event</b> where you can run for our cause and make a difference</li>
+                                    <li><b>Donate to Creating Futures.</b> We encourage you and the employees of the organization to directly donate whereby supporting our cause</li>
+                                    <li><b>Sponsor a Runner.</b> In the event that you cannot run, you could also sponsor a runner who  can run for our cause.</li>
+                                </ul>
 
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                                </p>
+
+
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
 
 
-    <!-- Programs Modal 5 -->
-    <div class="portfolio-modal modal fade" id="ProgramsModal5" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
+        <!-- Programs Modal 5 -->
+        <div class="portfolio-modal modal fade" id="ProgramsModal5" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2>Career Counselling &amp; Guidance</h2>
-                            <p class="item-intro text-muted"></p>
-                            <img class="img-responsive img-centered" src="img/portfolio/treehouse-preview.png" alt="">
-                            <p>The aim of this programme is to introduce the youth to the multitude of career options
-                            available for them in today’s world and guide them in choosing an option that best suits
-                            them. Focusing on creating self-awareness within the students and then enabling them
-                            to uncover their abilities, qualities and skills, we guide them in aligning their interests and
-                            skills to their current circumstances to identify their career options. This program also
-                            looks at Career Counselling.<br>
-                            We have separate programs: one attuned to the needs of grades 9 &amp; 10 th and another for
-                            1 st &amp; 2 nd PU students.<br></p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2>Career Counselling &amp; Guidance</h2>
+                                <p class="item-intro text-muted"></p>
+                                <img class="img-responsive img-centered" src="img/portfolio/treehouse-preview.png" alt="">
+                                <p>The aim of this programme is to introduce the youth to the multitude of career options
+                                    available for them in today’s world and guide them in choosing an option that best suits
+                                    them. Focusing on creating self-awareness within the students and then enabling them
+                                    to uncover their abilities, qualities and skills, we guide them in aligning their interests and
+                                    skills to their current circumstances to identify their career options. This program also
+                                    looks at Career Counselling.<br>
+                                    We have separate programs: one attuned to the needs of grades 9 &amp; 10 th and another for
+                                    1 st &amp; 2 nd PU students.<br></p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Programs Modal 6 -->
-    <div class="portfolio-modal modal fade" id="ProgramsModal6" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
+        <!-- Programs Modal 6 -->
+        <div class="portfolio-modal modal fade" id="ProgramsModal6" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2>Teacher Development</h2>
-                            <p class="item-intro text-muted"></p>
-                            <img class="img-responsive img-centered" src="img/portfolio/treehouse-preview.png" alt="">
-                            <p>The essence of a teacher lies in the ability to uncover a student’s true potential and
-                            inspire them. Through this programme we involve them in activities that aim to reinforce
-                            the pivotal role that they play in a child’s life and sensitise them to the opportunity that
-                            they have in influencing a life and through that our society at large. We work with them
-                            in expanding their perspectives, devising ways to be more responsive to the needs and
-                            adapt to the potential of individual students in a way that the learning engagement is
-                            impactful.<br></p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2>Teacher Development</h2>
+                                <p class="item-intro text-muted"></p>
+                                <img class="img-responsive img-centered" src="img/portfolio/treehouse-preview.png" alt="">
+                                <p>The essence of a teacher lies in the ability to uncover a student’s true potential and
+                                    inspire them. Through this programme we involve them in activities that aim to reinforce
+                                    the pivotal role that they play in a child’s life and sensitise them to the opportunity that
+                                    they have in influencing a life and through that our society at large. We work with them
+                                    in expanding their perspectives, devising ways to be more responsive to the needs and
+                                    adapt to the potential of individual students in a way that the learning engagement is
+                                    impactful.<br></p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Programs Modal 7 -->
-    <div class="portfolio-modal modal fade" id="ProgramsModal7" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
+        <!-- Programs Modal 7 -->
+        <div class="portfolio-modal modal fade" id="ProgramsModal7" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2>Computer Skills</h2>
-                            <p class="item-intro text-muted"></p>
-                            <img class="img-responsive img-centered" src="img/portfolio/treehouse-preview.png" alt="">
-                            <p>We work with students who do not have the privilege of accessing computers and hence
-                            we have designed this programme to equip them with the knowledge of basic computer
-                            usage. This structure of this programme facilitates exposure to simple computer
-                            operations, email usage and furthermore, attempts to introduce them to the world of MS-
-                            Word, Excel &amp; Powerpoint.<br></p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2>Computer Skills</h2>
+                                <p class="item-intro text-muted"></p>
+                                <img class="img-responsive img-centered" src="img/portfolio/treehouse-preview.png" alt="">
+                                <p>We work with students who do not have the privilege of accessing computers and hence
+                                    we have designed this programme to equip them with the knowledge of basic computer
+                                    usage. This structure of this programme facilitates exposure to simple computer
+                                    operations, email usage and furthermore, attempts to introduce them to the world of MS-
+                                    Word, Excel &amp; Powerpoint.<br></p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Programs Modal 8 -->
-    <div class="portfolio-modal modal fade" id="ProgramsModal8" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
+        <!-- Programs Modal 8 -->
+        <div class="portfolio-modal modal fade" id="ProgramsModal8" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2>Emotional Management</h2>
-                            <p class="item-intro text-muted"></p>
-                            <img class="img-responsive img-centered" src="img/portfolio/treehouse-preview.png" alt="">
-                            <p>Many of our students endure difficult relationships and circumstances in their lives. To
-                            face their day to day life, they need to be capable of managing their emotions and
-                            responding appropriately.<br>
-                            We start with helping them to identify their emotions, continue with recognising how they
-                            respond to those emotions and using techniques like group therapy, empathy, conflict
-                            management and other such impactful tools, we guide them on measures to reduce
-                            stress and help them be positively engaged in their life.<br></p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2>Emotional Management</h2>
+                                <p class="item-intro text-muted"></p>
+                                <img class="img-responsive img-centered" src="img/portfolio/treehouse-preview.png" alt="">
+                                <p>Many of our students endure difficult relationships and circumstances in their lives. To
+                                    face their day to day life, they need to be capable of managing their emotions and
+                                    responding appropriately.<br>
+                                    We start with helping them to identify their emotions, continue with recognising how they
+                                    respond to those emotions and using techniques like group therapy, empathy, conflict
+                                    management and other such impactful tools, we guide them on measures to reduce
+                                    stress and help them be positively engaged in their life.<br></p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Programs Modal 9 -->
-    <div class="portfolio-modal modal fade" id="ProgramsModal9" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
+        <!-- Programs Modal 9 -->
+        <div class="portfolio-modal modal fade" id="ProgramsModal9" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2>Wellbeing Programmes</h2>
-                            <p class="item-intro text-muted"></p>
-                            <img class="img-responsive img-centered" src="img/portfolio/treehouse-preview.png" alt="">
-                            <p>This is our programme for uneducated youth and school drop outs. Our endeavour is to
-                            work with them to instil the thought that despite their difficult situations in life, they can
-                            aspire, achieve and accomplish their desires. Our workshops transform into safe havens
-                            for them to express themselves without fear. Through our activities we make them feel
-                            worthy, appreciated and safe. Our ultimate aim is to germinate a genuine desire for
-                            improvement.<br></p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2>Wellbeing Programmes</h2>
+                                <p class="item-intro text-muted"></p>
+                                <img class="img-responsive img-centered" src="img/portfolio/treehouse-preview.png" alt="">
+                                <p>This is our programme for uneducated youth and school drop outs. Our endeavour is to
+                                    work with them to instil the thought that despite their difficult situations in life, they can
+                                    aspire, achieve and accomplish their desires. Our workshops transform into safe havens
+                                    for them to express themselves without fear. Through our activities we make them feel
+                                    worthy, appreciated and safe. Our ultimate aim is to germinate a genuine desire for
+                                    improvement.<br></p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Programs Modal 10 -->
-    <div class="portfolio-modal modal fade" id="ProgramsModal10" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
+        <!-- Programs Modal 10 -->
+        <div class="portfolio-modal modal fade" id="ProgramsModal10" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2>Soft skills</h2>
-                            <p class="item-intro text-muted"></p>
-                            <img class="img-responsive img-centered" src="img/portfolio/treehouse-preview.png" alt="">
-                            <p>Quintessential to making a mark in the career of your choice, mastery over soft skills is
-                            essential for anyone foraying into the corporate world. Leadership skills, Teamwork,
-                            Effective Communication, Negotiation, Business Etiquette and some others are among
-                            the soft skills that we have in our programme bouquet. With this programme we reach
-                            out to students who are in the final year of their studies or have just completed their
-                            education.<br></p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2>Soft skills</h2>
+                                <p class="item-intro text-muted"></p>
+                                <img class="img-responsive img-centered" src="img/portfolio/treehouse-preview.png" alt="">
+                                <p>Quintessential to making a mark in the career of your choice, mastery over soft skills is
+                                    essential for anyone foraying into the corporate world. Leadership skills, Teamwork,
+                                    Effective Communication, Negotiation, Business Etiquette and some others are among
+                                    the soft skills that we have in our programme bouquet. With this programme we reach
+                                    out to students who are in the final year of their studies or have just completed their
+                                    education.<br></p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Programs Modal 11 -->
-    <div class="portfolio-modal modal fade" id="ProgramsModal11" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
+        <!-- Programs Modal 11 -->
+        <div class="portfolio-modal modal fade" id="ProgramsModal11" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2>Whole School development</h2>
-                            <p class="item-intro text-muted"></p>
-                            <img class="img-responsive img-centered" src="img/portfolio/treehouse-preview.png" alt="">
-                            <p>The Creating Futures’ Whole School Development program is focused on the concept of
-                            ‘sustainability’. Starting early in the lifecycle, we target the educational institutions
-                            through whom the young adults start their learning journeys. We look at the holistic
-                            development of the school with the school management, teachers, parents and other
-                            community members collaborating to lay the foundation for a wholesome educational
-                            upbringing of the students.<br></p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2>Whole School development</h2>
+                                <p class="item-intro text-muted"></p>
+                                <img class="img-responsive img-centered" src="img/portfolio/treehouse-preview.png" alt="">
+                                <p>The Creating Futures’ Whole School Development program is focused on the concept of
+                                    ‘sustainability’. Starting early in the lifecycle, we target the educational institutions
+                                    through whom the young adults start their learning journeys. We look at the holistic
+                                    development of the school with the school management, teachers, parents and other
+                                    community members collaborating to lay the foundation for a wholesome educational
+                                    upbringing of the students.<br></p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
-    <!-- Programs Modal 12 -->
-    <div class="portfolio-modal modal fade" id="ProgramsModal12" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <div class="close-modal" data-dismiss="modal">
-                <div class="lr">
-                    <div class="rl">
+        <!-- Programs Modal 12 -->
+        <div class="portfolio-modal modal fade" id="ProgramsModal12" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-content">
+                <div class="close-modal" data-dismiss="modal">
+                    <div class="lr">
+                        <div class="rl">
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-8 col-lg-offset-2">
-                        <div class="modal-body">
-                            <!-- Project Details Go Here -->
-                            <h2>Personality Development</h2>
-                            <p class="item-intro text-muted"></p>
-                            <img class="img-responsive img-centered" src="img/portfolio/treehouse-preview.png" alt="">
-                            <p>Living responsibly and Self Responsibility is the key driver. This is a programme with a
-                            difference. We set the students on a path of exploration. We encourage them to look
-                            within and map their journey of life. In the process, they stumble upon their obstacles,
-                            appreciate their achievements and while doing so, identify their unique strengths and
-                            capabilities that have helped them to sustain and survive. We guide them in using this
-                            insightful information while making decisions and thus enabling them in living life
-                            responsibly and purposefully.<br></p>
-                            <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-8 col-lg-offset-2">
+                            <div class="modal-body">
+                                <!-- Project Details Go Here -->
+                                <h2>Personality Development</h2>
+                                <p class="item-intro text-muted"></p>
+                                <img class="img-responsive img-centered" src="img/portfolio/treehouse-preview.png" alt="">
+                                <p>Living responsibly and Self Responsibility is the key driver. This is a programme with a
+                                    difference. We set the students on a path of exploration. We encourage them to look
+                                    within and map their journey of life. In the process, they stumble upon their obstacles,
+                                    appreciate their achievements and while doing so, identify their unique strengths and
+                                    capabilities that have helped them to sustain and survive. We guide them in using this
+                                    insightful information while making decisions and thus enabling them in living life
+                                    responsibly and purposefully.<br></p>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
 
 
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+        <!-- jQuery -->
+        <script src="js/jquery.js"></script>
 
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
+        <!-- Bootstrap Core JavaScript -->
+        <script src="js/bootstrap.min.js"></script>
 
-    <!-- Plugin JavaScript -->
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-    <script src="js/classie.js"></script>
-    <script src="js/cbpAnimatedHeader.js"></script>
+        <!-- Plugin JavaScript -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+        <script src="js/classie.js"></script>
+        <script src="js/cbpAnimatedHeader.js"></script>
 
-    <!-- Contact Form JavaScript -->
-    <script src="js/jqBootstrapValidation.js"></script>
-    <script src="js/contact_me.js"></script>
+        <!-- Contact Form JavaScript -->
+        <script src="js/jqBootstrapValidation.js"></script>
+        <script src="js/contact_me.js"></script>
 
-    <!-- Custom Theme JavaScript -->
-    <script src="js/agency.js"></script>
+        <!-- Custom Theme JavaScript -->
+        <script src="js/agency.js"></script>
 
-    <!-- Slider JavaScript -->
-    <script src="js/jquery.animate-enhanced.min.js"></script>
-    <script src="js/jquery.superslides.js" type="text/javascript" charset="utf-8"></script>
-    <script>
-                $(function() {
-                  $('#slides').superslides({
-                    hashchange: false,
+        <!-- Slider JavaScript -->
+        <script src="js/jquery.animate-enhanced.min.js"></script>
+        <script src="js/jquery.superslides.js" type="text/javascript" charset="utf-8"></script>
+
+        <!-- Light Gallery -->
+        <link type="text/css" rel="stylesheet" href="css/lightgallery.css" /> 
+        <script src="js/lightgallery.js"></script>
+        <script src="js/lg-thumbnail.js"></script>
+        <script src="js/lg-fullscreen.js"></script>
+        <script>
+            $(function () {
+                $('#slides').superslides({
+                    hashchange: true,
                     play: 7000
-                  });
-
-                  // $('#slides').on('mouseenter', function() {
-                  //   $(this).superslides('stop');
-                  //   console.log('Stopped')
-                  // });
-                  // $('#slides').on('mouseleave', function() {
-                  //   $(this).superslides('start');
-                  //   console.log('Started')
-                  // });
                 });
-    </script>
-    
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109727847-1"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
 
-      gtag('config', 'UA-109727847-1');
-    </script>
+                $('#galleryslides').lightGallery({
+                    thumbnail: true
+               
+                });
 
-</body>
+                // $('#slides').on('mouseenter', function() {
+                //   $(this).superslides('stop');
+                //   console.log('Stopped')
+                // });
+                // $('#slides').on('mouseleave', function() {
+                //   $(this).superslides('start');
+                //   console.log('Started')
+                // });
+            });
+        </script>
+
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-109727847-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-109727847-1');
+        </script>
+
+    </body>
 
 </html>
