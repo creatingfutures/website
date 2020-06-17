@@ -21,7 +21,7 @@ $(function() {
             }
             //alert(name+" "+phone+" "+email+" "+message+" "+gender+" "+location);
             $.ajax({
-                url: "././mail/contact_me.php",
+                url: "64.37.52.172/mail/contact_me.php",
                 type: "POST",
                 data: {
                     name: name,
