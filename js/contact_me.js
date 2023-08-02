@@ -20,7 +20,7 @@ $(function() {
                 firstName = name.split(' ').slice(0, -1).join(' ');
             }
             let subject = "Volunteer Contact From CF Website: "+name;
-            let body = "You have received a new message from your CF website form for volunteering.\n\n"+`Here are the details:\n\nName: ${name}\n\nEmail: ${email}\n\nGender:${gender} \n\n Location:${location}. \n\n Phone: ${phone}\n\nMessage:\n${message}`;
+            let body = "A new message from CF website form for volunteering. "+`Here are the details: Name: ${name}, Email:${email}, Gender:${gender}, Location:${location}.   Phone: ${phone}, Message: ${message}`;
 
             window.open('mailto:jimmy.cherian@creatingfutures.in?subject='+subject+'&body='+body);
             //alert(name+" "+phone+" "+email+" "+message+" "+gender+" "+location);
